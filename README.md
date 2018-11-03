@@ -1,6 +1,4 @@
-#### 项目中抽象出的小工具。
-
-#### 几个重要的工具类的使用参考
+#### 项目中抽象出的小工具, 几个重要的工具类的使用参考
 
 ### 网络操作：SYHttpRequest
 - 请参考hq项目
@@ -89,12 +87,12 @@ return _textWebViewManager;
 }
 
 - (void)didReceiveMemoryWarning {
-[super didReceiveMemoryWarning];
-_textWebViewManager.delegate = nil;
-_textWebViewManager = nil;
-if( self.view.window==nil ){
-self.view = nil;
-}
+    [super didReceiveMemoryWarning];
+    _textWebViewManager.delegate = nil;
+    _textWebViewManager = nil;
+    if( self.view.window==nil ){
+        self.view = nil;
+    }
 }
 @end
 
