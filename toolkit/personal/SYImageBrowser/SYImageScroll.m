@@ -140,7 +140,7 @@
                 [self requestResult:image];
             }
             
-            [HUD hideAnimated:YES];
+            [self->HUD hideAnimated:YES];
             
         }];
     }
@@ -154,7 +154,7 @@
         _imgM.http = YES;
         [self setImgM:_imgM];
     }
-    [HUD hide:YES];
+    [HUD hideAnimated:YES];
 }
 
 #pragma mark - Scroll View Deledate (不断适配图片大小)

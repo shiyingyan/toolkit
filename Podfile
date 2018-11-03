@@ -8,5 +8,5 @@ target 'toolkit' do
     pod "MBProgressHUD"
     pod "AFNetworking"
     pod "FMDB"
-
+    pod 'AMapLocation-NO-IDFA'
 end

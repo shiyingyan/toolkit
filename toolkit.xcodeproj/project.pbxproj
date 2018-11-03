@@ -11,6 +11,8 @@
 		843EF210218D6E9F00407542 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843EF20F218D6E9F00407542 /* Default-568h@2x.png */; };
 		843EF23B218D73A100407542 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 843EF239218D73A100407542 /* AppDelegate.m */; };
 		843EF23D218D73B300407542 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 843EF23C218D73B300407542 /* main.m */; };
+		843EF23F218D752C00407542 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 843EF23E218D752C00407542 /* README.md */; };
+		843EF242218D776E00407542 /* SYAMapLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 843EF240218D776E00407542 /* SYAMapLocationManager.m */; };
 		84C79CFC21610A4400284309 /* MJTool_FMDBGetDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C79CF921610A4300284309 /* MJTool_FMDBGetDatabase.m */; };
 		84C79CFD21610A4400284309 /* MJTool_FMDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C79CFA21610A4400284309 /* MJTool_FMDBModel.m */; };
 		84C79D0021610ADB00284309 /* UIViewController+SYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C79CFE21610ADB00284309 /* UIViewController+SYViewController.m */; };
@@ -57,7 +59,9 @@
 		843EF239218D73A100407542 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		843EF23A218D73A100407542 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		843EF23C218D73B300407542 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		84C79CF52161095400284309 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		843EF23E218D752C00407542 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		843EF240218D776E00407542 /* SYAMapLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAMapLocationManager.m; sourceTree = "<group>"; };
+		843EF241218D776E00407542 /* SYAMapLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAMapLocationManager.h; sourceTree = "<group>"; };
 		84C79CF821610A3700284309 /* MJTool_FMDBGetDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJTool_FMDBGetDatabase.h; sourceTree = "<group>"; };
 		84C79CF921610A4300284309 /* MJTool_FMDBGetDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJTool_FMDBGetDatabase.m; sourceTree = "<group>"; };
 		84C79CFA21610A4400284309 /* MJTool_FMDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJTool_FMDBModel.m; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 		84C79CD32161093A00284309 = {
 			isa = PBXGroup;
 			children = (
+				843EF23E218D752C00407542 /* README.md */,
 				843EF23C218D73B300407542 /* main.m */,
 				843EF23A218D73A100407542 /* AppDelegate.h */,
 				843EF239218D73A100407542 /* AppDelegate.m */,
@@ -174,7 +179,6 @@
 			children = (
 				84C79CF721610A1C00284309 /* open */,
 				84C79CF621610A1200284309 /* personal */,
-				84C79CF52161095400284309 /* README.md */,
 			);
 			path = toolkit;
 			sourceTree = "<group>";
@@ -200,6 +204,8 @@
 				84C79D0921610B7700284309 /* SYAlertController.m */,
 				84C79D0821610B7700284309 /* SYHttpRequest.h */,
 				84C79D0521610B7600284309 /* SYHttpRequest.m */,
+				843EF241218D776E00407542 /* SYAMapLocationManager.h */,
+				843EF240218D776E00407542 /* SYAMapLocationManager.m */,
 				84C79D0721610B7700284309 /* SYWebViewManager.h */,
 				84C79D0421610B7600284309 /* SYWebViewManager.m */,
 				84C79CFF21610ADB00284309 /* UIViewController+SYViewController.h */,
@@ -357,6 +363,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843EF23F218D752C00407542 /* README.md in Resources */,
 				843EF210218D6E9F00407542 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,6 +459,7 @@
 				84C79D1721610C2900284309 /* GTMBase64.m in Sources */,
 				84C79CFD21610A4400284309 /* MJTool_FMDBModel.m in Sources */,
 				84C79D0A21610B7700284309 /* SYWebViewManager.m in Sources */,
+				843EF242218D776E00407542 /* SYAMapLocationManager.m in Sources */,
 				84C79D5021610D7800284309 /* TYShowAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -576,7 +584,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -595,7 +603,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

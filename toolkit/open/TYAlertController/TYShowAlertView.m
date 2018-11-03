@@ -170,7 +170,7 @@
     self.alpha = 0;
     _alertView.transform = CGAffineTransformScale(_alertView.transform,0.1,0.1);
     [UIView animateWithDuration:0.3 animations:^{
-        _alertView.transform = CGAffineTransformIdentity;
+        self->_alertView.transform = CGAffineTransformIdentity;
         self.alpha = 1;
     }];
     
@@ -180,7 +180,7 @@
 {
     if (self.superview) {
         [UIView animateWithDuration:0.3 animations:^{
-            _alertView.transform = CGAffineTransformScale(_alertView.transform,0.1,0.1);
+            self->_alertView.transform = CGAffineTransformScale(self->_alertView.transform,0.1,0.1);
             self.alpha = 0;
         } completion:^(BOOL finished) {
             [self removeFromSuperview];

@@ -1,6 +1,5 @@
 //
 //  SYWebViewManager.h
-//  DingDing
 //
 //  Created by Shing on 3/29/16.
 //  Copyright © 2016 Cstorm. All rights reserved.
@@ -8,6 +7,11 @@
 
 #import <Foundation/Foundation.h>
 #import <WebKit/WebKit.h>
+
+/***
+ *  iOS8发布时，封装的。  >iOS8系统，未测试过。
+ *
+ */
 
 @class SYWebViewManager;
 
