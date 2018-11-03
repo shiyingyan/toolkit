@@ -100,4 +100,11 @@ self.view = nil;
 
 ```
 
+### 和Android吐司一样的效果： SYToast
+
+```
+[SYToast showMessage:@""];
+
+```
+
 
