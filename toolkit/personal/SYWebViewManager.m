@@ -7,8 +7,6 @@
 //
 
 #import "SYWebViewManager.h"
-#import "MJDefine.h"
-#import "MJHeader.h"
 
 @interface SYWebViewManager ()<WKNavigationDelegate>
 
@@ -159,7 +157,7 @@
     if( !_progressView ){
         _progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 64, self.webView.frame.size.width, 1.0f)];
         _progressView.trackTintColor = [UIColor clearColor];
-        _progressView.progressTintColor = MJ_AppMainColor;
+        _progressView.progressTintColor = [UIColor colorWithRed:100 green:10 blue:100 alpha:0];
         [_webView addSubview:_progressView];
         [_webView bringSubviewToFront:_progressView];
     }

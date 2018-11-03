@@ -9,7 +9,6 @@
 #import "MJTool_FMDBModel.h"
 #import "MJTool_FMDBGetDatabase.h"
 #import <objc/runtime.h>
-#import "MJDefine.h"
 
 @implementation MJTool_FMDBModel
 #pragma mark - 创建数据库 -> 通过运行时拿到模型所有的属性，属性类型 -> 添加一个主键属性 -> 将所有的属性，主键拼接成（符合sqlite语法）字段定义语句 -> 执行语句，创建表以及表字段 -> 重新拿到所有的属性名，以及数据库中所有的字段名；将这2个数组进行对比，一旦发现某个属性在数据库没有对应的字段（漏掉了），数据库立即新增字段 -> 关闭数据库
@@ -23,7 +22,7 @@
     FMDatabase *db = [FMDatabase databaseWithPath:[MJTool_FMDBGetDatabase dbPath]];
     //开启数据库
     if (![db open]) {
-        MJLog(@"数据库打开失败!");
+        NSLog(@"数据库打开失败!");
         return NO;
     }
     
@@ -350,7 +349,7 @@
         NSString *sql = [NSString stringWithFormat:@"UPDATE %@ SET %@ WHERE %@ = ?;", tableName, keyString, primaryId];
         [updateValues addObject:primaryValue];
         res = [db executeUpdate:sql withArgumentsInArray:updateValues];
-        MJLog(res?@"更新成功":@"更新失败");
+        NSLog(res?@"更新成功":@"更新失败");
     }];
     return res;
 }
@@ -398,7 +397,7 @@
             NSString *sql = [NSString stringWithFormat:@"UPDATE %@ SET %@ WHERE %@=?;", tableName, keyString, primaryId];
             [updateValues addObject:primaryValue];
             BOOL flag = [db executeUpdate:sql withArgumentsInArray:updateValues];
-            MJLog(flag?@"更新成功":@"更新失败");
+            NSLog(flag?@"更新成功":@"更新失败");
             if (!flag) {
                 res = NO;
                 *rollback = YES;
@@ -535,7 +534,7 @@
         NSString *tableName = NSStringFromClass(self.class);
         NSString *sql = [NSString stringWithFormat:@"DELETE FROM %@",tableName];
         res = [db executeUpdate:sql];
-        MJLog(res?@"清空成功":@"清空失败");
+        NSLog(res?@"清空成功":@"清空失败");
     }];
     return res;
 }

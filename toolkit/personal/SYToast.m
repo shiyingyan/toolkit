@@ -7,7 +7,7 @@
 //
 
 #import "SYToast.h"
-#import "MJTool.h"
+#import "SYTool.h"
 
 @implementation SYToast
 
@@ -72,7 +72,8 @@
     errorContainerView.tag = 5000000;
     [window addSubview:errorContainerView];
     
-    UIImage *image = [MJTool loadImageFromLocalWithName:@"error"];
+    
+    UIImage *image = [SYTool loadImageFromLocalWithName:@"error"];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
     imageView.backgroundColor = [UIColor clearColor];
     [errorContainerView addSubview:imageView];

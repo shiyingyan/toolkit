@@ -7,9 +7,8 @@
 //
 
 #import "SYHttpRequest.h"
-#import "MJHeader.h"
-#import "MJDamageAssessmentManager.h"
-#import "MJConstant.h"
+
+static const int urlRequestTimeout = 10;
 
 @interface SYHttpRequest ()
 
@@ -137,16 +136,15 @@
     });
     
     NSMutableURLRequest *urlRequest = [[AFJSONRequestSerializer serializer] requestWithMethod:method URLString:urlString parameters:para error:nil];
-    urlRequest.timeoutInterval = [MJDamageAssessmentManager sharedInstance].urlRequestTimeOut;
-    MJLog(@"request.url = %@",urlRequest.URL.absoluteString);
+    urlRequest.timeoutInterval = urlRequestTimeout;
+    NSLog(@"request.url = %@",urlRequest.URL.absoluteString);
     if( [method isEqualToString:@"POST"] ){
-        MJLog(@"request.httpbody = %@",[[NSString alloc] initWithData:urlRequest.HTTPBody encoding:NSUTF8StringEncoding]);
+        NSLog(@"request.httpbody = %@",[[NSString alloc] initWithData:urlRequest.HTTPBody encoding:NSUTF8StringEncoding]);
     }
     
     if( authorization && authorization.length ) {
         [urlRequest addValue:authorization forHTTPHeaderField:@"Authorization"];
     } 
-    [urlRequest addValue:[NSString stringWithFormat:@"%@,%@,%f,%@,%@,%@",[MJTool safeString:[[MJUser sharedInstance].appUserInfo objectForKey:@"app_user_id"]],@"iOS",[[[UIDevice currentDevice] systemVersion] floatValue],[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"],[MJTool safeString:[MJDataCenter sharedInstance].damageAssessmentOrder.case_number],[MJTool safeString:[MJUser sharedInstance].sesstionID]] forHTTPHeaderField:@"UserInfo"];
     
     NSURLSessionTask *sessionTask = [self.httpSessionManager dataTaskWithRequest:urlRequest
                                                                   uploadProgress:uploadProgressBlock
@@ -158,29 +156,28 @@
                                                                    
                                                                    if( error ){
                                                                        
-                                                                       MJLog(@">>>>url = %@\nerror +%@\nreponseObject = %@",urlString,error,responseObject);
-                                                                       MJLog(@"reponseObject.allValues = %@",[responseObject allValues]);
+                                                                       NSLog(@">>>>url = %@\nerror +%@\nreponseObject = %@",urlString,error,responseObject);
+                                                                       NSLog(@"reponseObject.allValues = %@",[responseObject allValues]);
                                                                        if( error.code == -999 ){  //任务被取消,则不弹出警告框
                                                                            
                                                                            
                                                                        }else if( error.code == -1001 ){
                                                                            
-                                                                           [MJToast showMessage:connect_overtime];
+                                                                           NSLog(@"time out");
                                                                        
                                                                        }else if( error.code == -1005 ) {
                                                                        
-                                                                           [MJToast showMessage:off_line];
-                                                                           
+                                                                           NSLog(@"off line");
+
                                                                        }else{
                                                                            
                                                                            if( responseObject[@"Message"] ) {
                                                                                
-                                                                               [MJToast showMessage:responseObject[@"Message"]];
+                                                                               NSLog(@"%@", responseObject[@"Message"]);
                                                                                
                                                                            } else {
                                                                                
-                                                                               [MJToast showMessage:off_line];
-//                                                                                [MJToast showMessage:server_no_response];
+                                                                               NSLog(@"off line");
                                                                            }
                                                                            
                                                                        }
@@ -195,10 +192,10 @@
       
 //#ifdef DEBUG
                                                                        
-                                                                               MJLog(@">>>url = %@\nresponseObject = %@",urlString,responseObject);
+                                                                               NSLog(@">>>url = %@\nresponseObject = %@",urlString,responseObject);
 //#endif
                                                                                if( responseObject == nil ) {
-                                                                                   [MJToast showMessage:off_line];
+                                                                                   NSLog(@"off line");
 //                                                                                    [MJToast showMessage:server_no_response];
                                                                                    if( completion ) completion(nil,NO,nil);
                                                                                }else{
@@ -214,11 +211,11 @@
                                                                                        //
                                                                                        //                                                                               }else if (code>=400 && code<500 ) {
                                                                                        //
-                                                                                       //                                                                                   MJLog(appBugRequestText);
+                                                                                       //                                                                                   NSLog(appBugRequestText);
                                                                                        //
                                                                                        //                                                                               }else if (code >500 && code<=600 ) {
                                                                                        //
-                                                                                       //                                                                                   MJLog(serverBugRequestText);
+                                                                                       //                                                                                   NSLog(serverBugRequestText);
                                                                                        //
                                                                                        //                                                                               }else if (code == 999 ) {
                                                                                        
@@ -227,7 +224,7 @@
                                                                                    }else{
                                                                                        if(![responseObject[@"ResponseCode"]isEqualToString:@"OCR_904"])
                                                                                        {
-                                                                                           [MJToast showMessage:responseObject[@"ResponseDescription"]];
+                                                                                           NSLog(@"");
                                                                                        }
                                                                                       
                                                                                        if( completion ) completion(responseObject,NO,nil);
@@ -380,7 +377,7 @@
     AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
     [manager startMonitoring];
     if( manager.networkReachabilityStatus==AFNetworkReachabilityStatusNotReachable ){
-        [MJToast showMessage:off_line];
+        NSLog(@"offline");
         return NO;
     }
     return YES;

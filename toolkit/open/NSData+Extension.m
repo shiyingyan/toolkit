@@ -278,7 +278,7 @@
 //                       bufferPtrSize,
 //                       &movedBytes);
 //    
-//    //if (ccStatus == kCCSuccess) MJLog(@"SUCCESS");
+//    //if (ccStatus == kCCSuccess) NSLog(@"SUCCESS");
 //    if (ccStatus == kCCParamError){ return nil;}//@"PARAM ERROR";
 //    else if (ccStatus == kCCBufferTooSmall) return nil;//@"BUFFER TOO SMALL";
 //    else if (ccStatus == kCCMemoryFailure) return nil;//@"MEMORY FAILURE";
@@ -365,7 +365,7 @@
 ////            *pkcs7 = kCCOptionPKCS7Padding;
 ////        }
 ////    } else if(encryptOrDecrypt != kCCDecrypt) {
-////        MJLog(@"Invalid CCOperation parameter [%d] for cipher context.", *pkcs7 );
+////        NSLog(@"Invalid CCOperation parameter [%d] for cipher context.", *pkcs7 );
 ////    }
 ////	
 ////    // Create and Initialize the crypto reference.

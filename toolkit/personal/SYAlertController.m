@@ -8,6 +8,11 @@
 
 #import "SYAlertController.h"
 #import "SYKeyboardObserver.h"
+#import "Masonry.h"
+#import "UIViewController+SYViewController.h"
+#import "SYBaseView.h"
+
+#define MJ_AppMainColor [UIColor colorWithRed:158 green:158 blue:158 alpha:0]
 
 @interface SYAlertController ()<UITextFieldDelegate,SYKeyboardObserverDelegate>{
     UIViewController *_containerController;
@@ -41,7 +46,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.keyboardObserver.delegate = self;
-
+    
     [self.view setNeedsUpdateConstraints];
     [self.view updateConstraintsIfNeeded];
 }
@@ -68,7 +73,7 @@
         
         [self.containerView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self.view);
-            make.centerY.equalTo(self.view).offset(-1*containerViewOffsetWhenKeyboardShow);
+            make.centerY.equalTo(self.view).offset(-1*self->containerViewOffsetWhenKeyboardShow);
             make.width.equalTo(@300);
             make.height.equalTo(@130);
         }];
@@ -140,7 +145,7 @@
                  rightActionHandler:(ActionHandler)rightHandler
 {
     if( !containerController ){
-        MJLog(@"containerController为空");
+        NSLog(@"containerController为空");
         return NO;
     }
         

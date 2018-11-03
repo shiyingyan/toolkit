@@ -11,7 +11,7 @@
 #import "MBProgressHUD.h"
 #import "SYDeviceTest.h"
 #import "SDImageCache.h"
-#import "MJHeader.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 #define MaxZoomScale  2.5f
 #define MinZoomScale  1.0f
@@ -132,7 +132,7 @@
 - (void)loadHttpImg{
     
     if ((_imgM.url) && (!_imgM.ishttp)) {
-        [HUD show:YES];
+        [HUD showAnimated:YES];
         [self.imgView sd_setImageWithURL:_imgM.url placeholderImage:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
             if( error ){
                 [self requestResult:nil];
@@ -140,7 +140,7 @@
                 [self requestResult:image];
             }
             
-            [HUD hide:YES];
+            [HUD hideAnimated:YES];
             
         }];
     }
@@ -204,9 +204,9 @@
 #pragma mark 图片保存结果回调
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo{//保存图片回调
     if (error != NULL){ //失败
-        MJLog(@"图片保存失败->%@",error);
+        NSLog(@"图片保存失败->%@",error);
     }else{//成功
-        MJLog(@"图片保存成功");
+        NSLog(@"图片保存成功");
     }
 }
 

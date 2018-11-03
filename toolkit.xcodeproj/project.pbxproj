@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843EF20E218D6E1600407542 /* SYBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 843EF20C218D6E1500407542 /* SYBaseView.m */; };
+		843EF210218D6E9F00407542 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 843EF20F218D6E9F00407542 /* Default-568h@2x.png */; };
+		843EF23B218D73A100407542 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 843EF239218D73A100407542 /* AppDelegate.m */; };
+		843EF23D218D73B300407542 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 843EF23C218D73B300407542 /* main.m */; };
 		84C79CFC21610A4400284309 /* MJTool_FMDBGetDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C79CF921610A4300284309 /* MJTool_FMDBGetDatabase.m */; };
 		84C79CFD21610A4400284309 /* MJTool_FMDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C79CFA21610A4400284309 /* MJTool_FMDBModel.m */; };
 		84C79D0021610ADB00284309 /* UIViewController+SYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C79CFE21610ADB00284309 /* UIViewController+SYViewController.m */; };
@@ -42,9 +46,17 @@
 		84C79D6221610E2600284309 /* SYKeyboardObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C79D6021610E2600284309 /* SYKeyboardObserver.m */; };
 		84C79D6421610F2100284309 /* NullSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C79D6321610F2100284309 /* NullSafe.m */; };
 		84C79D6821610FFC00284309 /* SYTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C79D6621610FFB00284309 /* SYTool.m */; };
+		A45F08342D58F78AFA0A2956 /* Pods_toolkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5823FCB7EB41B7B2D1A1D65 /* Pods_toolkit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09400078750AFE6B8A58810F /* Pods-toolkit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-toolkit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-toolkit/Pods-toolkit.debug.xcconfig"; sourceTree = "<group>"; };
+		843EF20C218D6E1500407542 /* SYBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYBaseView.m; sourceTree = "<group>"; };
+		843EF20D218D6E1500407542 /* SYBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYBaseView.h; sourceTree = "<group>"; };
+		843EF20F218D6E9F00407542 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		843EF239218D73A100407542 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		843EF23A218D73A100407542 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		843EF23C218D73B300407542 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84C79CF52161095400284309 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		84C79CF821610A3700284309 /* MJTool_FMDBGetDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJTool_FMDBGetDatabase.h; sourceTree = "<group>"; };
 		84C79CF921610A4300284309 /* MJTool_FMDBGetDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJTool_FMDBGetDatabase.m; sourceTree = "<group>"; };
@@ -118,6 +130,8 @@
 		84C79D6521610F4C00284309 /* toolkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toolkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C79D6621610FFB00284309 /* SYTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTool.m; sourceTree = "<group>"; };
 		84C79D6721610FFC00284309 /* SYTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTool.h; sourceTree = "<group>"; };
+		EC1ACC02B44D09FA1B7D3362 /* Pods-toolkit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-toolkit.release.xcconfig"; path = "Pods/Target Support Files/Pods-toolkit/Pods-toolkit.release.xcconfig"; sourceTree = "<group>"; };
+		F5823FCB7EB41B7B2D1A1D65 /* Pods_toolkit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_toolkit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,17 +139,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A45F08342D58F78AFA0A2956 /* Pods_toolkit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5981B517348EE1CEC2259C8C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				09400078750AFE6B8A58810F /* Pods-toolkit.debug.xcconfig */,
+				EC1ACC02B44D09FA1B7D3362 /* Pods-toolkit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		84C79CD32161093A00284309 = {
 			isa = PBXGroup;
 			children = (
+				843EF23C218D73B300407542 /* main.m */,
+				843EF23A218D73A100407542 /* AppDelegate.h */,
+				843EF239218D73A100407542 /* AppDelegate.m */,
+				843EF20F218D6E9F00407542 /* Default-568h@2x.png */,
 				84C79CDE2161093A00284309 /* toolkit */,
 				84C79D6521610F4C00284309 /* toolkit.app */,
+				5981B517348EE1CEC2259C8C /* Pods */,
+				8DF979D39FB1B6150B3402CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +182,8 @@
 		84C79CF621610A1200284309 /* personal */ = {
 			isa = PBXGroup;
 			children = (
+				843EF20D218D6E1500407542 /* SYBaseView.h */,
+				843EF20C218D6E1500407542 /* SYBaseView.m */,
 				84C79D6721610FFC00284309 /* SYTool.h */,
 				84C79D6621610FFB00284309 /* SYTool.m */,
 				84C79D6121610E2600284309 /* SYKeyboardObserver.h */,
@@ -258,6 +290,14 @@
 			path = SYImageBrowser;
 			sourceTree = "<group>";
 		};
+		8DF979D39FB1B6150B3402CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5823FCB7EB41B7B2D1A1D65 /* Pods_toolkit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -265,9 +305,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84C79CF22161093D00284309 /* Build configuration list for PBXNativeTarget "toolkit" */;
 			buildPhases = (
+				5D5DFF43178F41121C9471A4 /* [CP] Check Pods Manifest.lock */,
 				84C79CD82161093A00284309 /* Sources */,
 				84C79CD92161093A00284309 /* Frameworks */,
 				84C79CDA2161093A00284309 /* Resources */,
+				470550CEBE18A6BF2A1F722A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -315,10 +357,58 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843EF210218D6E9F00407542 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		470550CEBE18A6BF2A1F722A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-toolkit/Pods-toolkit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-toolkit/Pods-toolkit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D5DFF43178F41121C9471A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-toolkit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84C79CD82161093A00284309 /* Sources */ = {
@@ -329,6 +419,7 @@
 				84C79D5F21610D8500284309 /* SYImageModel.m in Sources */,
 				84C79D4F21610D7800284309 /* TYAlertDropDownAnimation.m in Sources */,
 				84C79D4E21610D7800284309 /* UIView+TYAutoLayout.m in Sources */,
+				843EF23D218D73B300407542 /* main.m in Sources */,
 				84C79D5221610D7800284309 /* TYAlertController.m in Sources */,
 				84C79D0C21610B7700284309 /* SYAlertController.m in Sources */,
 				84C79D3021610CBF00284309 /* UIImage+RoundedCorner.m in Sources */,
@@ -350,6 +441,8 @@
 				84C79D0F21610BAB00284309 /* NSObject+SYObject.m in Sources */,
 				84C79D1D21610C6500284309 /* NSString+Extension.m in Sources */,
 				84C79D4D21610D7800284309 /* TYAlertController+TransitionAnimate.m in Sources */,
+				843EF23B218D73A100407542 /* AppDelegate.m in Sources */,
+				843EF20E218D6E1600407542 /* SYBaseView.m in Sources */,
 				84C79D4C21610D7800284309 /* TYAlertFadeAnimation.m in Sources */,
 				84C79D4921610D7800284309 /* TYAlertView.m in Sources */,
 				84C79D3421610D0F00284309 /* SYToast.m in Sources */,
@@ -478,10 +571,12 @@
 		};
 		84C79CF32161093D00284309 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09400078750AFE6B8A58810F /* Pods-toolkit.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -495,10 +590,12 @@
 		};
 		84C79CF42161093D00284309 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC1ACC02B44D09FA1B7D3362 /* Pods-toolkit.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
