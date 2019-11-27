@@ -105,6 +105,12 @@ self.locationDic = [[NSMutableDictionary alloc]init];
 
 ```
 
+### SYImageBrowerController 图片浏览器，支持单击缩放，支持双击缩放，支持横屏竖屏
+```
+使用起来也很简单，请参考文件api 
+```
+
+
 ### 其它美丽好用的小工具，不一一列举了 
 
 
